@@ -1,5 +1,10 @@
+wp-admin/
+wp-includes/
+
+wp-content/plugins/
 wp-content/uploads/
 wp-content/cache/
+
 node_modules/
-.DS_Store
 .env
+.DS_Store
