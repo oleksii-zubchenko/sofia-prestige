@@ -1,0 +1,84 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "panorama/video-360",
+  "version": "1.0.0",
+  "title": "Video 360°",
+  "category": "widgets",
+  "description": "Interactive 360° video Viewer for Panorama.",
+  "keywords": [
+    "panoramic image viewer",
+    "video panorama",
+    "360 video viewer"
+  ],
+  "textdomain": "panorama",
+  "attributes": {
+    "videoUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "options": {
+      "type": "object",
+      "default": {
+        "autoplay": true,
+        "loop": true,
+        "play": true,
+        "progress": true,
+        "volume": true,
+        "remainingTime": false,
+        "pip": false,
+        "fullscreen": false,
+        "playbackSpeed": false,
+        "initialView": false,
+        "initialPosition": {
+          "x": 0,
+          "y": 0,
+          "z": 120
+        }
+      }
+    },
+    "layout": {
+      "type": "object",
+      "default": {
+        "alignSl": {
+          "desktop": "center",
+          "tablet": "center",
+          "mobile": "center"
+        },
+        "width": {
+          "desktop": "100%",
+          "tablet": "100%",
+          "mobile": "100%"
+        }
+      }
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false
+  },
+  "example": {
+    "attributes": {}
+  },
+  "editorScript": [
+    "file:./index.js",
+    "videojs",
+    "videojs-vr",
+    "wp-api"
+  ],
+  "editorStyle": "file:./index.css",
+  "style": [
+    "file:./view.css",
+    "videojs",
+    "videojs-vr"
+  ],
+  "render": "file:./render.php",
+  "viewScript": [
+    "file:./view.js",
+    "videojs",
+    "videojs-vr"
+  ]
+}

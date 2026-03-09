@@ -1,0 +1,158 @@
+{
+  "apiVersion": "1",
+  "name": "bpgb/panorama",
+  "title": "Panorama - Gutenberg Block",
+  "description": "Panoramic 360 Degree Views.",
+  "category": "widgets",
+  "keywords": [
+    "panorama",
+    "360 Degree",
+    "panoramic"
+  ],
+  "textdomain": "panorama-block",
+  "attributes": {
+    "className": {
+      "type": "string",
+      "default": ""
+    },
+    "align": {
+      "type": "string",
+      "default": ""
+    },
+    "cId": {
+      "type": "string",
+      "default": ""
+    },
+    "panoType": {
+      "type": "string",
+      "default": "image"
+    },
+    "panoImage": {
+      "type": "object",
+      "default": {
+        "id": null,
+        "url": "",
+        "alt": "",
+        "title": ""
+      }
+    },
+    "autoRotate": {
+      "type": "boolean",
+      "default": true
+    },
+    "rotateSpeed": {
+      "type": "number",
+      "default": 1
+    },
+    "autoRotateInactivityDelay": {
+      "type": "number",
+      "default": 3000
+    },
+    "isDeviceMotion": {
+      "type": "boolean",
+      "default": false
+    },
+    "hideControl": {
+      "type": "boolean",
+      "default": true
+    },
+    "initialView": {
+      "type": "boolean",
+      "default": false
+    },
+    "initialPosition": {
+      "type": "object",
+      "default": {
+        "x": 0,
+        "y": 0,
+        "z": 120
+      }
+    },
+    "panoVideo": {
+      "type": "object",
+      "default": {
+        "id": null,
+        "url": "",
+        "title": ""
+      }
+    },
+    "autoPlay": {
+      "type": "boolean",
+      "default": true
+    },
+    "videoMute": {
+      "type": "boolean",
+      "default": true
+    },
+    "videoLoop": {
+      "type": "boolean",
+      "default": true
+    },
+    "fullscreen": {
+      "type": "boolean",
+      "default": true
+    },
+    "setting": {
+      "type": "boolean",
+      "default": true
+    },
+    "video": {
+      "type": "boolean",
+      "default": true
+    },
+    "width": {
+      "type": "string",
+      "default": "100%"
+    },
+    "height": {
+      "type": "string",
+      "default": "320px"
+    },
+    "alignment": {
+      "type": "string",
+      "default": "center"
+    },
+    "buttonColors": {
+      "type": "object",
+      "default": {
+        "color": "#fff",
+        "bg": "#000000B3"
+      }
+    },
+    "buttonHoverColors": {
+      "type": "object",
+      "default": {
+        "color": "#fff",
+        "bg": "#000000E6"
+      }
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false
+  },
+  "example": {
+    "attributes": {
+      "preview": true
+    }
+  },
+  "editorScript": [
+    "file:./index.js",
+    "bppiv-panolens",
+    "bppiv-three",
+    "wp-api"
+  ],
+  "editorStyle": "file:./index.css",
+  "style": [
+    "file:./view.css"
+  ],
+  "render": "file:./render.php",
+  "viewScript": [
+    "file:./view.js",
+    "bppiv-panolens",
+    "bppiv-three"
+  ]
+}

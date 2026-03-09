@@ -1,0 +1,1 @@
+<?php return array('dependencies' => array('react', 'react-dom', 'wp-block-editor', 'wp-block-editor/build-style/style.css', 'wp-block-library', 'wp-block-library/build-style/editor.css', 'wp-block-library/build-style/style.css', 'wp-block-library/build-style/theme.css', 'wp-blocks', 'wp-components/build-style/style.css'), 'version' => '302647e7af7478b63b61');

@@ -1,0 +1,104 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "panorama/image-360",
+  "version": "1.0.0",
+  "title": "Image 360°",
+  "category": "widgets",
+  "description": "Interactive 360° Viewer for Panoramic Images.",
+  "keywords": [
+    "panoramic image viewer",
+    "panorama",
+    "360° image viewer",
+    "image 360°"
+  ],
+  "textdomain": "panorama",
+  "attributes": {
+    "imageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "previewImgUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "loadButtonText": {
+      "type": "string",
+      "default": "Click to Load Panorama"
+    },
+    "options": {
+      "type": "object",
+      "default": {
+        "isRotate": true,
+        "autoRotateSpeed": 1,
+        "autoRotateInactivityDelay": 3000,
+        "hideDefaultCtrl": false,
+        "initialView": false,
+        "initialViewPosition": {
+          "pitch": 0,
+          "yaw": 0,
+          "hfov": 120
+        },
+        "autoLoad": true,
+        "draggable": true,
+        "compass": false,
+        "titleAuthor": true,
+        "title": "360° Image",
+        "author": "bPlugins",
+        "mouseZoom": true,
+        "disableKeyboardCtrl": false,
+        "doubleClickZoom": true,
+        "isByline": true
+      }
+    },
+    "customControl": {
+      "type": "boolean",
+      "default": false
+    },
+    "layout": {
+      "type": "object",
+      "default": {
+        "alignSl": {
+          "desktop": "center",
+          "tablet": "center",
+          "mobile": "center"
+        },
+        "width": {
+          "desktop": "100%",
+          "tablet": "100%",
+          "mobile": "100%"
+        },
+        "height": {
+          "desktop": "320px",
+          "tablet": "300px",
+          "mobile": "270px"
+        }
+      }
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false
+  },
+  "example": {
+    "attributes": {}
+  },
+  "editorScript": [
+    "file:./index.js",
+    "bppiv-pannellum-js",
+    "wp-api"
+  ],
+  "editorStyle": "file:./index.css",
+  "style": [
+    "file:./view.css",
+    "bppiv-pannellum-css"
+  ],
+  "render": "file:./render.php",
+  "viewScript": [
+    "file:./view.js",
+    "bppiv-pannellum-js"
+  ]
+}

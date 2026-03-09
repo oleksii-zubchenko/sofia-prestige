@@ -1,0 +1,79 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "panorama/google-street",
+  "version": "1.0.0",
+  "title": "Google Street Viewer",
+  "category": "widgets",
+  "description": "Interactive Google Street Viewer for Panorama.",
+  "keywords": [
+    "Google Street Viewer",
+    "Street Viewer panorama"
+  ],
+  "textdomain": "panorama",
+  "attributes": {
+    "panoId": {
+      "type": "string",
+      "default": ""
+    },
+    "options": {
+      "type": "object",
+      "default": {
+        "autoRotate": true,
+        "autoRotateSpeed": 1,
+        "autoRotateActivationDuration": 3000,
+        "hideDefaultCtrl": false,
+        "initialView": false,
+        "initialPosition": {
+          "x": -61.42,
+          "y": -8.95,
+          "z": 120
+        }
+      }
+    },
+    "layout": {
+      "type": "object",
+      "default": {
+        "alignSl": {
+          "desktop": "center",
+          "tablet": "center",
+          "mobile": "center"
+        },
+        "width": {
+          "desktop": "100%",
+          "tablet": "100%",
+          "mobile": "100%"
+        },
+        "height": {
+          "desktop": "320px",
+          "tablet": "300px",
+          "mobile": "270px"
+        }
+      }
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false
+  },
+  "example": {
+    "attributes": {}
+  },
+  "editorScript": [
+    "file:./index.js",
+    "bppiv-panolens",
+    "bppiv-three",
+    "wp-api"
+  ],
+  "editorStyle": "file:./index.css",
+  "style": "file:./view.css",
+  "render": "file:./render.php",
+  "viewScript": [
+    "file:./view.js",
+    "bppiv-panolens",
+    "bppiv-three"
+  ]
+}

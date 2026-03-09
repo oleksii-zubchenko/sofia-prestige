@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "panorama/parent",
+  "version": "1.0.0",
+  "title": "Panorama Viewer",
+  "category": "widgets",
+  "description": "Interactive Viewer for Panorama Image and video.",
+  "keywords": [
+    "panorama viewer",
+    "panorama block",
+    "b-blocks panorama"
+  ],
+  "textdomain": "panorama",
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false
+  },
+  "example": {
+    "attributes": {}
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css"
+}

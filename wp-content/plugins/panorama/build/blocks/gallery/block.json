@@ -1,0 +1,76 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "panorama/gallery",
+  "version": "1.0.0",
+  "title": "Gallery",
+  "category": "widgets",
+  "description": "Interactive gallery Viewer for Panoramic Images.",
+  "keywords": [
+    "panorama image viewer",
+    "gallery",
+    "gallery image"
+  ],
+  "textdomain": "panorama",
+  "attributes": {
+    "galleries": {
+      "type": "array",
+      "default": [
+        {
+          "img": "",
+          "isSetVideo": false,
+          "video": ""
+        }
+      ]
+    },
+    "galleryLimit": {
+      "type": "number",
+      "default": 6
+    },
+    "column": {
+      "type": "number",
+      "default": 2
+    },
+    "gap": {
+      "type": "string",
+      "default": "10px"
+    },
+    "loadMoreBtn": {
+      "type": "object",
+      "default": {
+        "text": "Load More",
+        "colors": {
+          "color": "",
+          "bg": ""
+        },
+        "hoverColors": {
+          "color": "",
+          "bg": ""
+        }
+      }
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false
+  },
+  "example": {
+    "attributes": {}
+  },
+  "editorScript": [
+    "file:./index.js",
+    "bppiv-panolens",
+    "bppiv-three"
+  ],
+  "editorStyle": "file:./index.css",
+  "style": "file:./view.css",
+  "render": "file:./render.php",
+  "viewScript": [
+    "file:./view.js",
+    "bppiv-panolens",
+    "bppiv-three"
+  ]
+}

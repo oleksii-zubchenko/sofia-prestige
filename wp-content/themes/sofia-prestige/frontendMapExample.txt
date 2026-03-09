@@ -1,0 +1,26 @@
+$country = get_field('country');
+$region = get_field('region');
+$city = get_field('city');
+$street = get_field('street');
+$house = get_field('house');
+$lat = get_field('latitude');
+$lng = get_field('longitude');
+?>
+
+<div class="real-estate-address">
+    <?= esc_html("$country, $region, $city, $street $house"); ?>
+</div>
+
+<?php if ($lat && $lng): ?>
+<div id="map" style="height:400px;"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+var map = L.map('map').setView([<?= $lat ?>, <?= $lng ?>], 15);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+L.marker([<?= $lat ?>, <?= $lng ?>]).addTo(map);
+</script>
+<?php endif; ?>

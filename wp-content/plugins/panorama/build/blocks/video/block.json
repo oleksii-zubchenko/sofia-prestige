@@ -1,0 +1,82 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "panorama/video",
+  "version": "1.0.0",
+  "title": "Video",
+  "category": "widgets",
+  "description": "Interactive video Viewer for Panorama.",
+  "keywords": [
+    "panoramic image viewer",
+    "video panorama"
+  ],
+  "textdomain": "panorama",
+  "attributes": {
+    "videoUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "options": {
+      "type": "object",
+      "default": {
+        "autoplay": false,
+        "muted": false,
+        "loop": true,
+        "controlBar": true,
+        "fullscreen": true,
+        "setting": true,
+        "video": true,
+        "initialView": false,
+        "initialPosition": {
+          "x": 0,
+          "y": 0,
+          "z": 120
+        }
+      }
+    },
+    "layout": {
+      "type": "object",
+      "default": {
+        "alignSl": {
+          "desktop": "center",
+          "tablet": "center",
+          "mobile": "center"
+        },
+        "width": {
+          "desktop": "100%",
+          "tablet": "100%",
+          "mobile": "100%"
+        },
+        "height": {
+          "desktop": "320px",
+          "tablet": "300px",
+          "mobile": "270px"
+        }
+      }
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false
+  },
+  "example": {
+    "attributes": {}
+  },
+  "editorScript": [
+    "file:./index.js",
+    "bppiv-panolens",
+    "bppiv-three",
+    "wp-api"
+  ],
+  "editorStyle": "file:./index.css",
+  "style": "file:./view.css",
+  "render": "file:./render.php",
+  "viewScript": [
+    "file:./view.js",
+    "bppiv-panolens",
+    "bppiv-three"
+  ]
+}
